@@ -118,9 +118,9 @@ def get_token(code):
 
 
 
-
+"""
 if __name__ == '__main__':
-    code = """ { Sample program in TINY language – computes factorial}
+    code =  { Sample program in TINY language – computes factorial}
      read x;   {input an integer }
      if  0 < x   then     {  don’t compute if x <= 0 }
         fact  := 1;
@@ -129,6 +129,6 @@ if __name__ == '__main__':
             x  := x  -  1
         until  x  =  0;
         write  fact   {  output  factorial of x }
-     end """
-    print(get_token(code))
+     end 
+    print(get_token(code))"""
    
