@@ -8,8 +8,8 @@ import sys
 class UI_MainWindow(QMainWindow):
     def __init__(self):
         super(UI_MainWindow, self).__init__()
-        loadUi("/media/ehab/Data 2/faculty of engineering ain shams/4th CSE/System Software/project/Scanner.ui", self)
-        pixmap = QPixmap("/media/ehab/Data 2/faculty of engineering ain shams/4th CSE/System Software/project/new.png")
+        loadUi("Scanner.ui", self)
+        pixmap = QPixmap("new.png")
         self.label.setPixmap(pixmap)
         self.label.resize(pixmap.width(), pixmap.height())
         self.pushButton.clicked.connect(self.scan)
