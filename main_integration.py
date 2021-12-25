@@ -25,29 +25,9 @@ class TINYParserWidget(QMainWindow):
         self.add_initial_code()
         #self.textEdit.setPlainText()
         self.show()
-        #super().__init__()
-        #self.initUI()
+        
 
-    def initUI(self):
-
-        print("fj")
-
-        """
-        lbl = QLabel('Enter TINY Language Code', self)
-        self.textEdit = QTextEdit()
-        self.add_initial_code()
-        submit_button = QPushButton('Parse')
-        submit_button.clicked.connect(self.submitted)
-        grid = QGridLayout()
-        grid.setSpacing(10)
-        grid.addWidget(lbl, 1, 0)
-        grid.addWidget(self.textEdit, 1, 1)
-        grid.addWidget(submit_button, 2, 1)
-        self.setLayout(grid)
-        self.setGeometry(40, 40, 500, 900)
-        self.setWindowTitle('TINY Parser')
-        self.show()
-        """
+    
 
     def add_initial_code(self):
         self.textEdit.append("read x;")
@@ -89,10 +69,10 @@ class TINYParserWidget(QMainWindow):
 
     def draw(self, same_rank_nodes):
         graph = self.G
-        # pos = nx.get_node_attributes(graph, 'pos')
+        
         pos = self.pygraphviz_layout_with_rank(
             graph, prog='dot', sameRank=same_rank_nodes)
-        # pos = nx.nx_pydot.graphviz_layout(graph, prog='dot')
+        
         labels = dict((n, d['value']) for n, d in graph.nodes(data=True))
         f = plt.figure(1, figsize=(13, 8.65))
         for shape in ['s', 'o']:
